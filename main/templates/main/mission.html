@@ -1,0 +1,17 @@
+{% extends "main/base.html" %}
+{% block title %}Mission{% endblock %}
+{% block content %}
+{% load static %}
+<main>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-md-10 col-12 offset-lg-2 offset-md-1">
+                <div class="about-section">
+                    <h2>{{ about_info.title }}</h2>
+                    <p>{{ about_info.content }}</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</main>
+{% endblock %}
