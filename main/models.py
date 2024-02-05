@@ -13,6 +13,7 @@ class About(models.Model):
     def __str__(self):
         return self.title
     
+    
 class Mission(models.Model):
     title = models.CharField(max_length=100)
     mission_content = models.TextField(max_length=5000, blank=False)
@@ -40,9 +41,14 @@ class UploadVideo(models.Model):
     title = models.CharField(max_length=50,null=False, default='Trending Videos')
     description = models.TextField(blank=True)
     video_title = models.FileField(upload_to='videos/', default='Trending Videos')
+    upload_time = models.DateTimeField(default=timezone.now, editable=False)
 
     def __str__(self):
         return self.title
+    
+    @property
+    def short_upload_time(self):
+        return self.upload_time.strftime('%b %d, %Y %H:%M')
 
 
 class NewsCategory(models.Model):

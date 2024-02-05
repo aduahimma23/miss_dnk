@@ -14,6 +14,5 @@ urlpatterns = [
     path('contestant/', create_contestant, name='contestant'),
     path('song_list/', song_list, name='song_list'),
     path('song/<int:pk>/', song_detail, name='song_detail'),
-    # path('song/<int:pk>/download/', download_song, name='download_song'),
     path('<int:pk>/', BlogDetailView.as_view(), name='blog-detail'),
 ]
