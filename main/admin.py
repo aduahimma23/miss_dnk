@@ -2,7 +2,7 @@ from django.contrib import admin
 from django.urls import reverse, path
 from django.utils.safestring import mark_safe
 from .models import (Contestant, 
-    UploadVideo, Post, Header, NewsCategory, Song,
+    UploadVideo, Post, HeaderImage, NewsCategory, Song,
     ContactPage, About, Mission, UserFeedBack, RegistrationStatus)
 
 
@@ -61,7 +61,7 @@ class HeaderImageAdmin(admin.ModelAdmin):
     
     display_image.short_description = 'Image Preview'
 
-admin.site.register(Header, HeaderImageAdmin)
+admin.site.register(HeaderImage, HeaderImageAdmin)
 
 
 @admin.register(UserFeedBack)

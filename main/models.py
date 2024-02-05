@@ -22,7 +22,7 @@ class Mission(models.Model):
         return self.title
     
 
-class Header(models.Model):
+class HeaderImage(models.Model):
     POSITION_CHOICES = [
         ('First', 'First'),
         ('First Runners up', 'First Runners up'),
